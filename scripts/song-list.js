@@ -14,6 +14,7 @@
 
         <td>song.title</td>
         <td>song.duration</td>
+        <td>${player.prettyTime(song.duration)}</td>
         <td>${index}</td>
         <td>${index + 1}</td>
         <td>${song.title}</td>
@@ -21,6 +22,7 @@
        </tr>
     `);
     song.element.on('click', event => {
+      helper.playPauseAndUpdate(song);
       player.playPause(song);
       $('button#play-pause').attr('playState', player.playState);
     });
