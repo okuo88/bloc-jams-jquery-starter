@@ -37,10 +37,10 @@
      }, 1000);
      $('#volume-control input').on('input', function (event) {
        player.setVolume(event.target.value);
-   });
+     });
 
 }
 
-     $('#time-control input').on('input', function (event) {
-       player.skipTo(event.target.value);
-   });
+$('#time-control input').on('input', function (event) {
+  player.skipTo(event.target.value);
+});
